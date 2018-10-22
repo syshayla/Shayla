@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+.maindiv{
+	height: 600px;
+	width: 80%;
+	background-color: darkseagreen;
+	border: 1px solid black;
+	margin: 0 auto;	
+}
+
+.row{
+	height: auto;
+	min-height: 30px;
+}
+
+.left{
+	height: auto;
+	float: left;
+	width: 30%;
+}
+.right{
+	height: auto;
+	float: left;
+	width: 70%;
+}
+
+li{
+	font-size: 20px;
+}
+table{
+	border-collapse: collapse;
+	 height:200px
+}
+td{
+	background-color: rosybrown;
+}
+
+h1{
+	font-size: 50px;
+	color: green;
+}
+.bo{
+	border: 2px solid salmon;
+	border-radius: 10px;
+		
+}
