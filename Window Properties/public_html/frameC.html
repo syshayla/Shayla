@@ -6,22 +6,17 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Window Properties</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="winProp.css">
     </head>
-    <body>
+    <body bgcolor="#c6d699">
         <script>
-            function abc(i, j) {
-                for (i = 1; i <= j; i++) {
-                  if(i%15==0){
-				  
-                    document.write(i + "<br>");
-                }
-            }
-			}
-            abc(1, 1000);
-			 </script>
-        
+            var display="<h3>Where am I?</h3><div class='bod'>";
+            display+=window.location;
+            document.write(display);
+            
+        </script>
     </body>
 </html>

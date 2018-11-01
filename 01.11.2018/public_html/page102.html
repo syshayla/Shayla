@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Building Objects</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <style type="text/css">
+            h2{
+                font-size:16pt;
+                color:#584095;
+                font-family: verdana
+            }
+            h3{
+                font-size: 14pt;
+               
+                color: #6b8cc1;
+                background-color: black;
+                font-family: verdana
+            }
+        </style>
+    </head>
+    <body bgcolor="#abc241">
+        <script>
+            var acme=new Object();
+            acme.management="Management coordinates everything.";
+            acme.management=new Object();
+            acme.management.rand="Research and Development works to develop new and better products and sevices.";
+            acme.finance="Finance keeps track of the money.";
+            acme.production="Production makes the stuff.";
+            acme.marketing="marketing develops strategies to target markets for the products.";
+            acme.marketing=new Object();
+            acme.marketing.sales="Sales contacts potential clients and sells the product.";
+            acme.fulfillment="Fullfilment delivers sold products.";
+            var display="<h2>First the properties of the acme object</h2>";
+            for(var counter in acme){
+                display+=counter+"<br>";
+                
+            }
+            display+="<h3>And now the values of the properties of management, marketing and fulfillment</h3>";
+             display+=acme.management.rand+"<br>";
+             display+=acme.marketing.sales+"<br>";
+              display+=acme.fulfillment;
+             document.write(display);
+            
+        </script>
+    </body>
+</html>
