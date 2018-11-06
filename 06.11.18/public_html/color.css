@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 6, 2018, 10:33:27 AM
+    Author     : Sumaiya
+*/
+body{
+    background-color: #deceal;
+    font-family: verdana;
+}
+.header{
+    font-size: 18pt;
+    font-size: bold;
+    color: red;
+}
+.label{
+    font-size: 14pt;
+    color: #7a8215;
+}
+.bdtext{
+    font-size: 10;
+    color: #7a8215;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Dynamic Change</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="color.css" rel="stylesheet">
+        <script>
+            function showcolor() {
+                var doc = open("", "colorfront")
+                var fcolor1 = parent.frames[0].document.forms[0].elements[0].value;
+                var fcolor2 = parent.frames[0].document.forms[0].elements[1].value;
+
+                doc.document.write("<body bgcolor=#dddddd>");
+                doc.document.write("<center>");
+                doc.document.write("<h3>");
+                doc.document.write('<font size=+3 color="' + fcolor1 + '">');
+                doc.document.write("J");
+                doc.document.write("</font>");
+                doc.document.write('<font color="' + fcolor2 + '">');
+                doc.document.write("ava");
+                doc.document.write("</font>");
+                doc.document.write('<font size=+3 color="' + fcolor1 + '">');
+                doc.document.write("S");
+                doc.document.write("</font>");
+                doc.document.write('<font color="' + fcolor2 + '">');
+                doc.document.write("cript </h3>");
+                doc.document.write("</font> <p>");
+                doc.document.write("</center>");
+                doc.document.write("</body>");
+                doc.document.close();
+
+
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <form>
+            <p class="header">Interactive font color Change</p>
+            <div class="label">Text Color 1&nbsp;&nbsp;<input type="text" size="15" name="name">
+                <br>
+                Text Color 2&nbsp;&nbsp;<input type="text" size="15" name="name"></div>
+            <p>
+                <input type="button" value="Color fonts" onclick="showcolor()">
+            
+        </form>
+    </center>
+    </body>
+</html>
