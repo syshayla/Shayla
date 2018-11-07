@@ -10,24 +10,26 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            function validateEmail() {
+            function emailValid() {
                 var x = document.myForm.email.value;
                 var atpos = x.indexOf("@");
                 var dotpos = x.lastIndexOf(".");
                 if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
-                    alert("Not a valid e-mail address");
+                    alert("This is not valid");
                     return false;
 
                 } else {
-                    alert("Email address is valid");
+                    alert("This is valid email");
                 }
             }
         </script>
     </head>
     <body>
-        <form name="myForm" action="#" onsubmit="return validateEmail()" method="post">
-            Email: <input type="text" name="email">
+        <form name="myForm" action="#" onsubmit="return emailValid()" method="post">
+            E-mail:   <input type="text" name="email">
             <input type="submit" value="Send">
+
+
         </form>
     </body>
 </html>
