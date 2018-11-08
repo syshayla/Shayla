@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Menu Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function getFlavour() {
+                var scoop = document.iceCream.flavors;
+                var cone = scoop.options[scoop.selectedIndex].text;
+                if (cone != "Flavour Menu") {
+                    alert("Here\'s your" + " " + cone + " " + "ice cream cone!")
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <body onload="document.iceCream.reset();">
+        <form name="iceCream">
+            <h3>Select your flavour from the menu:</h3>
+            <select name="flavors" onchange="getFlavour()">
+                <option name="dummy" value="null">Flavor Menu
+                <option>Peach
+                <option>Peppermint
+                <option>Rashberry Swirl
+                <option>Rum Raisin
+                </option>
+            </select><p>
+        </form>
+    </body>
+</html>

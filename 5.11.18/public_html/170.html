@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function getBird() {
+                var state = document.stateBird.state.value;
+                var bird = document.stateBird.bird.value;
+                alert("The state bird of" +" " +state + " "+"is the" +" " +bird);
+            }
+        </script>
+    </head>
+    <body bgcolor="rosybrown">
+        <form name="stateBird">
+            <input type="text" name="state">:State Name<br>
+            <input type="text" name="bird">:Name of State Bird<p>
+                <input type="button" value="Bird Button" onclick="getBird()";>
+        </form>
+    </body>
+</html>

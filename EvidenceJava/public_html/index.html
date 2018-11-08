@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            label{
+                color:red;
+                padding: 4px 10px
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <form name="myForm">
+            Name <input type="text" name="fname"><label id="fnamex"></label><br>
+            Email <input type="text" name="email"><label id="email"></label><br>
+            Round <select name="round">
+                <option value="Select A Round">Select A Round</option>
+                <option value="Round 38">Round 38</option>
+                <option value="Round 39">Round 39</option>
+
+            </select>
+            <label id="round"></label><br>
+            <textarea rows="5" cols="20" name="msg" placeholder="AT least 10 characters"></textarea>
+            <label id="msg"></label><br>
+        </form>
+        <button onclick="validateForm()">Submit</button>
+
+        <script>
+            var win;
+            function validateForm() {
+                var fname = document.myForm.fname.value;
+                var email = document.myForm.email.value;
+                var round = document.myForm.round.value;
+                var msg = document.myForm.msg.value;
+                
+                if (fname==""){
+                    document.getElementById("fnamex").innerHTML="Name must be filled up";
+                    return false;
+                }else if(fname.length<3){
+                    document.getElementById("fnamex").innerHTML="ATleast 3 characters";
+                    return false;
+                }else{
+                     document.getElementById("fnamex").innerHTML="";
+                }
+                 if (email==""){
+                     document.getElementById("email").innerHTML="Email must be filled up";
+                  return false;
+                }else{
+                     document.getElementById("email").innerHTML="";
+                }
+                if (round=="Select A Round"){
+                    document.getElementById("round").innerHTML="Select a Round";
+                  return false;
+                }else{
+                     document.getElementById("round").innerHTML="";
+                }
+                if (msg.lenght<10){
+                    document.getElementById("msg").innerHTML="AT least 10 characters";
+                  return false;
+                }else{
+                    document.getElementById("msg").innerHTML="";
+                    win=window.open("","","width=400");
+                    
+                    win.document.write("<h2><center>Form Output</h2></center><hr>");
+                    win.document.write("Name:"+fname+"<br>");
+                    win.document.write("Email:"+email+"<br>");
+                    win.document.write("Round:"+round+"<br>");
+                    win.document.write("Comments:"+msg+"<br>");
+                    
+                }
+                }
+            
+        </script>
+
+    </body>
+</html>
