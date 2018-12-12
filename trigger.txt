@@ -37,3 +37,30 @@ SQL>  CREATE OR REPLACE TRIGGER usa_after_delete
 
 Trigger created.
 
+multiple updated,
+
+
+SQL> CREATE OR REPLACE TRIGGER rahim_after_update AFTER UPDATE ON rahim
+  2  FOR EACH ROW
+  3  DECLARE
+  4  BEGIN
+  5  UPDATE rahim_backup
+  6  set code= :new.code, name=:new.name, country=:new.country
+  7  where code= :old.code;
+  8  DBMS_OUTPUT.PUT_LINE('SUCCESSFULLY UPDATE');
+  9  END;
+ 10  /
+
+Trigger created.
+
+
+SQL> update rahim set code=1002, name= 'y', country= default where code=102;
+
+1 row updated.
+
+SQL> update rahim set code=1003, name= 'Z', country= default where code=103;
+
+1 row updated.
+
+
+
